@@ -22,13 +22,9 @@ function Navbar() {
           <Link className="img-nav" to="/animalList">
             FIND PET
           </Link>
-          {/* Link to organization list page */}
-          <Link className="img-nav" to="/organizationList">
-            <span>ORGANISATIONS </span>
-          </Link>
-          {/* Link to sign up page */}
+          {/* Link to login page */}
           <Link className="img-nav" to="/login">
-            SIGN UP
+            LOG IN
           </Link>
         </div>
       </nav>
