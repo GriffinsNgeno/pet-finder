@@ -1,9 +1,11 @@
 import { useState, useEffect } from 'react'
 import Animal from './Animal'
 import AnimalDetails from './AnimalDetails'
+import Search from '../Search'
 
 const AnimalList = () => {
     const [animals, setAnimals] = useState([])
+    const [allAnimals, setAllAnimals] = useState([])
   
     useEffect(()=>{
         fetch("http://localhost:9292/animal")
@@ -13,6 +15,12 @@ const AnimalList = () => {
         })
     },[])
     console.log(animals);
+
+    function handleSearch(value){
+      console.log(animals);
+      const updatedAnimals = allAnimals.filter(animal=> animal.breeds.primary.toLowerCase() === value.toLowerCase())
+      setAnimals(updatedAnimals)
+    }
     const animalArray = animals.map((animal)=>{
         return <div>
             <img src= {animal.image} alt='animal' ></img>
@@ -23,6 +31,7 @@ const AnimalList = () => {
     })
   return (
     <div className="bg-gray">
+      <Search onSearch={handleSearch}/>
       <div className="flex flex-wrap w-3/4 mx-auto">
 
         {animals.map((animal, index) => {
@@ -43,8 +52,9 @@ const AnimalList = () => {
           );
         })}
          <AnimalDetails
-        animals={animalArray}
+        animals={allAnimals}
       />
+      {animalArray}
       </div>
     </div>
   )
