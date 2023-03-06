@@ -1,6 +1,6 @@
 import React from "react";
 
-const Animal = ({ image, breed, name }) => {
+const Animal = ({ image, breed, name, age, gender }) => {
   return (
     <div>
       <div className="flex flex-wrap align-items-center hover:scale-110 p-4">
@@ -10,7 +10,9 @@ const Animal = ({ image, breed, name }) => {
           </a>
           <div className="p-2">
             <h4 className="text-cyan-900 text-l font-bold">{name}</h4>
+            <p className="text-gray-700 text-base">{age}</p>
             <p className="text-gray-700 text-base">{breed}</p>
+            <p className="text-gray-700 text-base">{gender}</p>
           </div>
         </div>
       </div>
