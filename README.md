@@ -18,7 +18,7 @@ You may also see any lint errors in the console.
 
 Petfinder is an online pet adoption platform where users search for their desired pets by their breed or type. The users get the privilege of requesting for an adoption once they find their desired pet.
 
-General Information
+## General Information
 This app helps users to get and adopt pets .REa
 This application enables pet lovers to adopt rescued pets in the comfort of their homes.
 The project solves a real problem. The project sharpens our react skills.
@@ -35,10 +35,12 @@ React router Dom
 # Steps
 npm install
 npm install react-router-dom
-Usage
+
+## Usage
 Users after installing this application are required to create an account. afterward, they get to search for their desired pets. Then users can request for adoption.
 
 ## Project Status
 The project is still underway with more updates to be made.
 
-## Acknowledgement
+## Author
+Griffins Ngeno
